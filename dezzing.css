@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:700&amp;subset=cyrillic,cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: "Open Sans";
+    align-items: stretch;
+    min-height: 100vh;
+    font-size: 1.2rem;
+}
+
+h1, h2 {
+    font-family: "Roboto Slab";
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.protect {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: red;
+}
+
+.protect-content {
+    width: 800px;
+    max-width: 90%;
+    background: white;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.logo, .content {
+    flex: 1;
+}
+
+.logo {
+    background-image: url('kappacup.png');
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-color: yellow;
+    background-size: contain;
+}
+
+.content {
+    display: flex;
+    padding: 1rem;
+    box-sizing: border-box;
+    /*align-items: center;*/
+    justify-content: center;
+    flex-direction: column;
+    background-color: #B8DDE8;
+}
+
+.sticky-bottom {
+    font-size: 0.75rem;
+    font-color: gray;
+}
+
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.canvas__rucya {
+    z-index: 1337;
+}
+
+.canvas__kzyf {
+    z-index: 1338;
+}
+
+.rucya {
+    position: absolute;
+    background-image: url('rucya.png');
+    width: 250px;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bird {
+    position: absolute;
+    width: 640px;
+    height: 640px;
+    background-image: url('kzyf.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bird.right {
+    transform: scale(-1, 1);
+}
